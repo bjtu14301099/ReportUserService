@@ -6,7 +6,7 @@ import cn.edu.bjtu.weibo.dao.impl.ReportDAOImpl;
 
 public class ReportUserServiceImpl implements ReportUserService{
 
-	private ReportDAO report = null;
+	private ReportDAO reportDAO = null;
 	
 	public boolean ReportUser(String userId, String reportedUserId) {
 		// TODO Auto-generated method stub
