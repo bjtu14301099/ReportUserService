@@ -2,7 +2,7 @@ package cn.edu.bjtu.weibo.service.impl;
 
 import cn.edu.bjtu.weibo.service.ReportUserService;
 import cn.edu.bjtu.weibo.dao.ReportDAO;
-import cn.edu.bjtu.weibo.dao.impl.ReportDaoImpl;
+import cn.edu.bjtu.weibo.dao.impl.ReportDAOImpl;
 
 public class ReportUserServiceImpl implements ReportUserService{
 
@@ -11,7 +11,7 @@ public class ReportUserServiceImpl implements ReportUserService{
 	public boolean ReportUser(String userId, String reportedUserId) {
 		// TODO Auto-generated method stub
 		
-		report = new ReportDaoImpl();
+		reportDAO = new ReportDAOImpl();
 		if(report.ReportUser(userId, reportedUserId) == true)
 			return true;
 		else
