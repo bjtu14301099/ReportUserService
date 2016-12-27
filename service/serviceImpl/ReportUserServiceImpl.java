@@ -12,7 +12,7 @@ public class ReportUserServiceImpl implements ReportUserService{
 		// TODO Auto-generated method stub
 		
 		reportDAO = new ReportDAOImpl();
-		if(report.ReportUser(userId, reportedUserId) == true)
+		if(reportDAO.ReportUser(userId, reportedUserId) == true)
 			return true;
 		else
 			return false;
