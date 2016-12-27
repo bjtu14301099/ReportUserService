@@ -2,16 +2,17 @@ package cn.edu.bjtu.weibo.service.impl;
 
 import cn.edu.bjtu.weibo.service.ReportUserService;
 import cn.edu.bjtu.weibo.dao.ReportDAO;
-import cn.edu.bjtu.weibo.dao.impl.ReportDAOImpl;
 
+@Service("reportUserService")
 public class ReportUserServiceImpl implements ReportUserService{
 
-	private ReportDAO reportDAO = null;
+	@Autowired
+	ReportDAO reportDAO;
 	
+	@Override
 	public boolean ReportUser(String userId, String reportedUserId) {
 		// TODO Auto-generated method stub
 		
-		reportDAO = new ReportDAOImpl();
 		if(reportDAO.ReportUser(userId, reportedUserId) == true)
 			return true;
 		else
